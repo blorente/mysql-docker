@@ -27,6 +27,7 @@ VOLUME /var/lib/mysql
 
 COPY docker-entrypoint.sh /entrypoint.sh
 COPY healthcheck.sh /healthcheck.sh
+COPY my.cnf ~/my.cnf
 ENTRYPOINT ["/entrypoint.sh"]
 HEALTHCHECK CMD /healthcheck.sh
 EXPOSE 3306 33060
